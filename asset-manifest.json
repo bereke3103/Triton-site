@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Triton-site/static/css/main.6f8b48ba.css",
+    "main.js": "/Triton-site/static/js/main.deef23ac.js",
+    "static/media/main.jpg": "/Triton-site/static/media/main.c0243f35acf494929a58.jpg",
+    "static/media/bottom.jpg": "/Triton-site/static/media/bottom.fc7ef3dd4c4d960fa0b9.jpg",
+    "static/media/video.jpg": "/Triton-site/static/media/video.abdf4e5967dfb55724cc.jpg",
+    "static/media/card.jpg": "/Triton-site/static/media/card.1dcc5c78804bba4ec727.jpg",
+    "static/media/plagin.jpg": "/Triton-site/static/media/plagin.5131390725d191f5cedf.jpg",
+    "static/media/third__reason.svg": "/Triton-site/static/media/third__reason.8ab2286196eb37d5d1e0685c1216fef2.svg",
+    "static/media/first__reason.svg": "/Triton-site/static/media/first__reason.8971d6c3dea33fa120dadaeb645dbb31.svg",
+    "static/media/second__reason.svg": "/Triton-site/static/media/second__reason.2053a817f4b67553e5fef42350d2398c.svg",
+    "static/media/logo.svg": "/Triton-site/static/media/logo.161490e83ecccff5d0ec63cfedce4f9c.svg",
+    "static/media/slick.svg": "/Triton-site/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Triton-site/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Triton-site/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Triton-site/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/twitter.svg": "/Triton-site/static/media/twitter.a4bd0f2c83f58906f6b23a964cb93f10.svg",
+    "index.html": "/Triton-site/index.html",
+    "static/media/play.svg": "/Triton-site/static/media/play.3f259e598ceff091070a334ad9be562f.svg",
+    "main.6f8b48ba.css.map": "/Triton-site/static/css/main.6f8b48ba.css.map",
+    "main.deef23ac.js.map": "/Triton-site/static/js/main.deef23ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f8b48ba.css",
+    "static/js/main.deef23ac.js"
+  ]
+}
