@@ -19,9 +19,9 @@ function App() {
 
       <Banner />
 
-      <Safety />
-
       <Products />
+
+      <Safety />
 
       <AboutPlugin />
 

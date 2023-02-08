@@ -6,7 +6,7 @@ const SliderClients = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
   };
   return (

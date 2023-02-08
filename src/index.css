@@ -28,7 +28,7 @@ button {
 
 .container {
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1300px;
 }
 
 ul,
@@ -189,6 +189,7 @@ a.header__menu__links::before {
 
 .safety {
   position: relative;
+  margin-top: 105px;
 }
 .safety > img {
   width: 100%;
@@ -216,6 +217,7 @@ a.header__menu__links::before {
 
 /* products start */
 .products__item {
+  cursor: grab;
   margin-left: 6%;
 }
 
@@ -250,30 +252,31 @@ a.header__menu__links::before {
   color: white;
   position: absolute;
   top: 26px;
-  left: 15px;
+  left: 25px;
 }
 
 .products__item__title {
   color: white;
   position: absolute;
-  top: 198px;
-  left: 15px;
+  left: 25px;
   font-style: normal;
   font-weight: 600;
   font-size: 22px;
   line-height: 35px;
   max-width: 274px;
+  bottom: 95px;
 }
 
 .products__item__more__info {
   color: white;
   position: absolute;
   bottom: 30px;
-  left: 15px;
+  left: 25px;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
+  text-decoration: solid;
 }
 
 .products__title {
@@ -479,6 +482,7 @@ a.header__menu__links::before {
 /* clients start */
 
 .clients {
+  position: relative;
   margin-top: 53px;
 }
 
@@ -492,6 +496,10 @@ a.header__menu__links::before {
 
 .clients__items {
   margin-top: 70px;
+}
+
+.clients__item {
+  cursor: grab;
 }
 
 /* clients end */
@@ -531,14 +539,15 @@ a.header__menu__links::before {
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
-  /* width: 50%; */
+  width: 88%;
+
   line-height: 32px;
 }
 
 .choising__info__with__pic {
   margin-right: 105px;
   margin-top: 22px;
-  margin-left: 21%;
+  margin-left: 2%;
   margin-bottom: 40px;
   cursor: grab;
 }
@@ -554,13 +563,15 @@ a.header__menu__links::before {
 .choising__info__logo {
   position: absolute;
   top: 45px;
-  left: 55px;
+  left: 30px;
 }
 
 .choising__info__title {
   position: absolute;
   top: 160px;
-  left: 55px;
+
+  left: 30px;
+
   color: white;
   font-style: normal;
   font-weight: 600;
@@ -571,7 +582,7 @@ a.header__menu__links::before {
 .choising__info__subtitle {
   position: absolute;
   top: 215px;
-  left: 55px;
+  left: 30px;
   color: white;
   font-style: normal;
   font-weight: 400;
@@ -581,6 +592,17 @@ a.header__menu__links::before {
 /* choising end */
 
 /* question answers start */
+
+.questions__answers__line {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 35%;
+  background: #ebf2f8;
+  margin-top: 17px;
+  height: 1px;
+  margin-top: 22px;
+}
 
 .questions {
   margin-top: 80px;
@@ -771,6 +793,7 @@ a.header__menu__links::before {
 /* footer start */
 .footer__block {
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .footer {
@@ -814,7 +837,8 @@ a.header__menu__links::before {
 
   left: 0;
 
-  height: 5px;
+  height: 3px;
+
   width: 50px;
 
   margin: 0 auto;
@@ -839,9 +863,9 @@ a.header__menu__links::before {
   content: '';
   position: absolute;
   height: 3px;
-  width: 192px;
+  width: 191px;
   background: #142b7a;
-  margin-top: 20px;
-  margin-left: 40.8%;
+  margin-top: 17px;
+  margin-left: 29%;
 }
 /* line end */
