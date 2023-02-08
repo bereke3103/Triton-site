@@ -17,7 +17,7 @@ const PluginItems = (props) => {
       setDisableBtn(false)
     }
     if (index === 3) {
-      setDisable(!disable)
+      setDisable(false)
     }
   }
 
