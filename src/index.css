@@ -4,6 +4,22 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 7px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: #143861;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #343f84;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #253861;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -633,6 +649,7 @@ a.header__menu__links::before {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  padding-top: 10px;
 }
 
 .questions__answers__item__text {
