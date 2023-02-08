@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Triton-site/static/css/main.50fa40bc.css",
-    "main.js": "/Triton-site/static/js/main.070e3260.js",
+    "main.css": "/Triton-site/static/css/main.dcdfe03d.css",
+    "main.js": "/Triton-site/static/js/main.295c0f59.js",
     "static/media/main.jpg": "/Triton-site/static/media/main.c0243f35acf494929a58.jpg",
     "static/media/bottom.jpg": "/Triton-site/static/media/bottom.fc7ef3dd4c4d960fa0b9.jpg",
     "static/media/video.jpg": "/Triton-site/static/media/video.abdf4e5967dfb55724cc.jpg",
@@ -18,11 +18,11 @@
     "static/media/twitter.svg": "/Triton-site/static/media/twitter.a4bd0f2c83f58906f6b23a964cb93f10.svg",
     "index.html": "/Triton-site/index.html",
     "static/media/play.svg": "/Triton-site/static/media/play.3f259e598ceff091070a334ad9be562f.svg",
-    "main.50fa40bc.css.map": "/Triton-site/static/css/main.50fa40bc.css.map",
-    "main.070e3260.js.map": "/Triton-site/static/js/main.070e3260.js.map"
+    "main.dcdfe03d.css.map": "/Triton-site/static/css/main.dcdfe03d.css.map",
+    "main.295c0f59.js.map": "/Triton-site/static/js/main.295c0f59.js.map"
   },
   "entrypoints": [
-    "static/css/main.50fa40bc.css",
-    "static/js/main.070e3260.js"
+    "static/css/main.dcdfe03d.css",
+    "static/js/main.295c0f59.js"
   ]
 }
