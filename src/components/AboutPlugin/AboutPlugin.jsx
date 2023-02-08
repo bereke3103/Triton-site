@@ -1,8 +1,15 @@
-import video from '../../img/video.jpg';
-import play from '../../img/play.svg';
-import ReactPlayer from 'react-player';
+import video from '../../img/video.jpg'
+import play from '../../img/play.svg'
+import ReactPlayer from 'react-player'
+import { useState } from 'react'
 
 const AboutPlugin = () => {
+  const [showInfo, setShowInfo] = useState(1)
+
+  const toggleShowInfo = (index) => {
+    setShowInfo(index)
+  }
+
   return (
     <section className="more__plugin">
       <div className="more__plugin__box">
@@ -15,11 +22,32 @@ const AboutPlugin = () => {
               </div>
 
               <div className="more__plugin__subtitle__box">
-                <div className="more__plugin__subtitle">
-                  Выявляйте риски в работе с казахстанскими контрагентами.
+                <div
+                  className={
+                    showInfo === 1
+                      ? 'more__plugin__subtitle active__tabs'
+                      : 'more__plugin__subtitle'
+                  }
+                >
+                  ПЕРВАЯ ИНФОРМАЦИЯ
                 </div>
-                <div className="more__plugin__subtitle">
-                  Выявляйте риски в работе с казахстанскими контрагентами.
+                <div
+                  className={
+                    showInfo === 2
+                      ? 'more__plugin__subtitle active__tabs'
+                      : 'more__plugin__subtitle'
+                  }
+                >
+                  ВТОРАЯ ИНФОРМАЦИЯ
+                </div>
+                <div
+                  className={
+                    showInfo === 3
+                      ? 'more__plugin__subtitle active__tabs'
+                      : 'more__plugin__subtitle'
+                  }
+                >
+                  ТРЕТЬЯ ИНФОРМАЦИЯ
                 </div>
               </div>
             </div>
@@ -28,17 +56,38 @@ const AboutPlugin = () => {
 
             <div className="more__plugin__instruct">
               <div className="text__btn__instruct">
-                <button className="btn__intsruct">1</button>
+                <button
+                  className={
+                    showInfo === 1 ? 'btn__intsruct active' : 'btn__intsruct'
+                  }
+                  onClick={() => toggleShowInfo(1)}
+                >
+                  1
+                </button>
                 <div className="text__instruct">Плагин</div>
               </div>
 
               <div className="text__btn__instruct">
-                <button className="btn__intsruct">1</button>
+                <button
+                  className={
+                    showInfo === 2 ? 'btn__intsruct active' : 'btn__intsruct'
+                  }
+                  onClick={() => toggleShowInfo(2)}
+                >
+                  1
+                </button>
                 <div className="text__instruct">Плагин</div>
               </div>
 
               <div className="text__btn__instruct">
-                <button className="btn__intsruct">1</button>
+                <button
+                  className={
+                    showInfo === 3 ? 'btn__intsruct active' : 'btn__intsruct'
+                  }
+                  onClick={() => toggleShowInfo(3)}
+                >
+                  1
+                </button>
                 <div className="text__instruct">Плагин</div>
               </div>
             </div>
@@ -65,11 +114,32 @@ const AboutPlugin = () => {
               </div>
 
               <div className="more__plugin__subtitle__box">
-                <div className="more__plugin__subtitle">
-                  Выявляйте риски в работе с казахстанскими контрагентами.
+                <div
+                  className={
+                    showInfo === 1
+                      ? 'more__plugin__subtitle active__tabs'
+                      : 'more__plugin__subtitle'
+                  }
+                >
+                  ПЕРВАЯ ИНФОРМАЦИЯ
                 </div>
-                <div className="more__plugin__subtitle">
-                  Выявляйте риски в работе с казахстанскими контрагентами.
+                <div
+                  className={
+                    showInfo === 2
+                      ? 'more__plugin__subtitle active__tabs'
+                      : 'more__plugin__subtitle'
+                  }
+                >
+                  ВТОРАЯ ИНФОРМАЦИЯ
+                </div>
+                <div
+                  className={
+                    showInfo === 3
+                      ? 'more__plugin__subtitle active__tabs'
+                      : 'more__plugin__subtitle'
+                  }
+                >
+                  ТРЕТЬЯ ИНФОРМАЦИЯ
                 </div>
               </div>
             </div>
@@ -78,17 +148,38 @@ const AboutPlugin = () => {
 
             <div className="more__plugin__instruct">
               <div className="text__btn__instruct">
-                <button className="btn__intsruct">1</button>
+                <button
+                  className={
+                    showInfo === 1 ? 'btn__intsruct active' : 'btn__intsruct'
+                  }
+                  onClick={() => toggleShowInfo(1)}
+                >
+                  1
+                </button>
                 <div className="text__instruct">Плагин</div>
               </div>
 
               <div className="text__btn__instruct">
-                <button className="btn__intsruct">1</button>
+                <button
+                  className={
+                    showInfo === 2 ? 'btn__intsruct active' : 'btn__intsruct'
+                  }
+                  onClick={() => toggleShowInfo(2)}
+                >
+                  1
+                </button>
                 <div className="text__instruct">Плагин</div>
               </div>
 
               <div className="text__btn__instruct">
-                <button className="btn__intsruct">1</button>
+                <button
+                  className={
+                    showInfo === 3 ? 'btn__intsruct active' : 'btn__intsruct'
+                  }
+                  onClick={() => toggleShowInfo(3)}
+                >
+                  1
+                </button>
                 <div className="text__instruct">Плагин</div>
               </div>
             </div>
@@ -115,11 +206,32 @@ const AboutPlugin = () => {
               </div>
 
               <div className="more__plugin__subtitle__box">
-                <div className="more__plugin__subtitle">
-                  Выявляйте риски в работе с казахстанскими контрагентами.
+                <div
+                  className={
+                    showInfo === 1
+                      ? 'more__plugin__subtitle active__tabs'
+                      : 'more__plugin__subtitle'
+                  }
+                >
+                  ПЕРВАЯ ИНФОРМАЦИЯ
                 </div>
-                <div className="more__plugin__subtitle">
-                  Выявляйте риски в работе с казахстанскими контрагентами.
+                <div
+                  className={
+                    showInfo === 2
+                      ? 'more__plugin__subtitle active__tabs'
+                      : 'more__plugin__subtitle'
+                  }
+                >
+                  ВТОРАЯ ИНФОРМАЦИЯ
+                </div>
+                <div
+                  className={
+                    showInfo === 3
+                      ? 'more__plugin__subtitle active__tabs'
+                      : 'more__plugin__subtitle'
+                  }
+                >
+                  ТРЕТЬЯ ИНФОРМАЦИЯ
                 </div>
               </div>
             </div>
@@ -128,17 +240,38 @@ const AboutPlugin = () => {
 
             <div className="more__plugin__instruct">
               <div className="text__btn__instruct">
-                <button className="btn__intsruct">1</button>
+                <button
+                  className={
+                    showInfo === 1 ? 'btn__intsruct active' : 'btn__intsruct'
+                  }
+                  onClick={() => toggleShowInfo(1)}
+                >
+                  1
+                </button>
                 <div className="text__instruct">Плагин</div>
               </div>
 
               <div className="text__btn__instruct">
-                <button className="btn__intsruct">1</button>
+                <button
+                  className={
+                    showInfo === 2 ? 'btn__intsruct active' : 'btn__intsruct'
+                  }
+                  onClick={() => toggleShowInfo(2)}
+                >
+                  1
+                </button>
                 <div className="text__instruct">Плагин</div>
               </div>
 
               <div className="text__btn__instruct">
-                <button className="btn__intsruct">1</button>
+                <button
+                  className={
+                    showInfo === 3 ? 'btn__intsruct active' : 'btn__intsruct'
+                  }
+                  onClick={() => toggleShowInfo(3)}
+                >
+                  1
+                </button>
                 <div className="text__instruct">Плагин</div>
               </div>
             </div>
@@ -158,7 +291,7 @@ const AboutPlugin = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutPlugin;
+export default AboutPlugin

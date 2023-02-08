@@ -342,6 +342,12 @@ a.header__menu__links::before {
   line-height: 22px;
   color: #181818;
   margin-bottom: 20px;
+  width: 56%;
+  display: none;
+}
+
+.more__plugin__subtitle.active__tabs {
+  display: block;
 }
 
 .more__plugin__video {
@@ -423,6 +429,15 @@ a.header__menu__links::before {
   font-size: 20px;
   line-height: 30px;
   z-index: 5;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn__intsruct.active {
+  background: #131c39;
+}
+
+.btn__intsruct:hover {
+  background: #131c39;
 }
 
 /*.btn__intsruct::after {
