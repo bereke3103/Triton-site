@@ -1,6 +1,6 @@
-import { Link } from 'react-scroll';
-import logo from '../../img/logo.svg';
-import { animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll'
+import logo from '../../img/logo.svg'
+import { animateScroll as scroll } from 'react-scroll'
 
 const Header = () => {
   return (
@@ -20,6 +20,7 @@ const Header = () => {
               <ul className="header__menu__items">
                 <li>
                   <Link
+                    offset={-100}
                     to="choising"
                     smooth={true}
                     duration={1000}
@@ -30,6 +31,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
+                    offset={-150}
                     to="plugin"
                     smooth={true}
                     duration={1000}
@@ -40,6 +42,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
+                    offset={-150}
                     to="faq"
                     smooth={true}
                     duration={1000}
@@ -50,6 +53,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
+                    offset={-308}
                     to="contact"
                     smooth={true}
                     duration={1000}
@@ -64,7 +68,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
