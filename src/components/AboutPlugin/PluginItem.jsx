@@ -14,7 +14,7 @@ const PluginItems = (props) => {
   const toggleShowInfo = (index) => {
     setShowInfo(index)
     if (index === 2) {
-      setDisableBtn(!disableBtn)
+      setDisableBtn(false)
     }
     if (index === 3) {
       setDisable(!disable)
