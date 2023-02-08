@@ -1,6 +1,6 @@
 const FormFeedback = () => {
   return (
-    <div className="form__feedback">
+    <div className="form__feedback" id="contact">
       <form action="">
         <div className="input__label">
           <label>Фамилия</label>

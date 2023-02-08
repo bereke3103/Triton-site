@@ -1,11 +1,17 @@
+import { Link } from 'react-scroll';
 import logo from '../../img/logo.svg';
+import { animateScroll as scroll } from 'react-scroll';
 
 const Header = () => {
   return (
     <header className="header">
       <div className="container">
         <div className="header__items">
-          <div className="header__logo">
+          <div
+            style={{ cursor: 'pointer' }}
+            className="header__logo"
+            onClick={() => scroll.scrollToTop()}
+          >
             <img src={logo} alt="" />
           </div>
 
@@ -13,24 +19,44 @@ const Header = () => {
             <nav className="nav">
               <ul className="header__menu__items">
                 <li>
-                  <a href="" className="header__menu__links">
+                  <Link
+                    to="choising"
+                    smooth={true}
+                    duration={1000}
+                    className="header__menu__links"
+                  >
                     О нас
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="" className="header__menu__links">
+                  <Link
+                    to="plugin"
+                    smooth={true}
+                    duration={1000}
+                    className="header__menu__links"
+                  >
                     Плагины
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="" className="header__menu__links">
+                  <Link
+                    to="faq"
+                    smooth={true}
+                    duration={1000}
+                    className="header__menu__links"
+                  >
                     FAQ
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="" className="header__menu__links">
+                  <Link
+                    to="contact"
+                    smooth={true}
+                    duration={1000}
+                    className="header__menu__links"
+                  >
                     Контакты
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>

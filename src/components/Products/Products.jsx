@@ -2,7 +2,7 @@ import SliderSimple from '../SliderSimple';
 
 const Products = () => {
   return (
-    <section className="products">
+    <section className="products" id="plugin">
       <div className="container">
         <div className="products__box">
           <div className="products__title">

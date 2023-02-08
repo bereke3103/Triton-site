@@ -4,7 +4,7 @@ import QuestionText from './QuestionText';
 
 const Questions = () => {
   return (
-    <section className="questions">
+    <section className="questions" id="faq">
       <div className="container">
         <div className="questions__box">
           <QuestionText />

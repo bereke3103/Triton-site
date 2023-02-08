@@ -1,3 +1,4 @@
+import ReactPlayer from 'react-player';
 import play from '../../img/play.svg';
 
 const Knowledge = () => {
@@ -12,6 +13,14 @@ const Knowledge = () => {
         </div>
 
         <div className="knowledge__play">
+          <div className="knowledge__video">
+            <ReactPlayer
+              className="video__youtube"
+              url="https://youtu.be/SXLz3PBFbDs"
+              width="100%"
+              height="100%"
+            />
+          </div>
           <div className="knowledge__play__pic">
             <img src={play} alt="" />
           </div>

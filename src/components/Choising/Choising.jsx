@@ -2,7 +2,7 @@ import SliderChoising from '../SliderChoising';
 
 const Choising = () => {
   return (
-    <section className="choising">
+    <section className="choising" id="choising">
       <div className="container">
         <div className="choising__box">
           <div className="choising__info">

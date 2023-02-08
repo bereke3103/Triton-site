@@ -10,6 +10,9 @@ body {
   padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
 /* button {
   display: none;
 } */
@@ -78,12 +81,33 @@ a {
 }
 
 .header__menu__links {
+  cursor: pointer;
+  position: relative;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   color: #ffffff;
 }
+
+a.header__menu__links::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 1.5px;
+  background-color: white;
+}
+
+a.header__menu__links:hover:before {
+  width: 100%;
+}
+
+a.header__menu__links::before {
+  transition: width 0.35s;
+}
+
 /* header end */
 
 /* banner start */
@@ -317,6 +341,12 @@ a {
   font-size: 16px;
   line-height: 26px;
   margin-top: 138px;
+  border: none;
+  transition: all 0.1s ease-in;
+}
+
+.download__plugin:hover {
+  background: #131c39a3;
 }
 
 .more__plugin__video > img {
@@ -378,6 +408,25 @@ a {
 /* plugin info end */
 
 /* knowledge start */
+
+.knowledge {
+  position: relative;
+}
+
+.knowledge__video {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
+
+.video__youtube {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
 .knowledge__box {
   display: flex;
   flex-direction: column;
@@ -561,6 +610,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .questions__answers__item__text {
@@ -570,11 +620,21 @@ a {
   line-height: 28px;
 }
 
+.questions__answers__item__pic {
+  transform: rotate(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.questions__answers__item__pic.active {
+  transform: rotate(180deg);
+}
+
 .questions__answers__item__answer {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
+  margin-top: 33px;
 }
 
 .questions__answers__item__answer.none {
@@ -695,6 +755,11 @@ a {
   color: white;
   margin-top: 20px;
   padding: 10px 179px;
+  transition: all 0.1s ease-in;
+}
+
+.btn__form__feedback:hover {
+  background: #131c39a3;
 }
 
 .form__main {
