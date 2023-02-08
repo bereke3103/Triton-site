@@ -424,6 +424,17 @@ a.header__menu__links::before {
   line-height: 30px;
   z-index: 5;
 }
+
+/*.btn__intsruct::after {
+  background: #666d83;
+  content: '';
+  height: 5px;
+  left: 0;
+  margin: -1.2% auto 0 34.8%;
+  position: absolute;
+  width: 50px;
+  width: 31%;
+}*/
 /* plugin info end */
 
 /* knowledge start */
