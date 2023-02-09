@@ -410,6 +410,7 @@ a.header__menu__links::before {
 
 button:disabled {
   background: gray;
+  cursor: not-allowed;
 }
 
 button:disabled:hover {
