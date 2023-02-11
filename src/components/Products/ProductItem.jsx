@@ -1,7 +1,9 @@
-import { Link } from 'react-scroll'
-import plugin from '../../img/plagin.jpg'
+import { Link } from 'react-scroll';
+import plugin from '../../img/plagin.jpg';
 const ProductItem = (props) => {
-  const { title, shortInfo, id } = props
+  const { title, shortInfo, id } = props;
+  // console.log(id);
+  // console.log(props);
   return (
     <div className="products__item">
       <div className="products__item_pic">
@@ -13,7 +15,7 @@ const ProductItem = (props) => {
         <div className="products__item__title">{shortInfo}</div>
 
         <Link
-          offset={-308}
+          offset={-595}
           to={id}
           smooth={true}
           duration={1000}
@@ -25,7 +27,7 @@ const ProductItem = (props) => {
         <span className="products__item__line"></span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductItem
+export default ProductItem;

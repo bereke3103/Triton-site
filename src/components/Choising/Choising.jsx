@@ -1,19 +1,31 @@
+import { useEffect, useState } from 'react';
 import SliderChoising from '../SliderChoising';
 
 const Choising = () => {
+  const [choisings, setChoisings] = useState([]);
+
+  useEffect(() => {
+    const url = 'https://localhost:7183/getChoising';
+
+    fetch(url, {
+      method: 'GET',
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        setChoisings(result);
+      });
+  }, [choisings]);
+
   return (
     <section className="choising" id="choising">
       <div className="container">
         <div className="choising__box">
-          <div className="choising__info">
-            <div className="choising__title">Почему нас выбирают</div>
-            <div className="choising__subtitle">
-              Являясь всего лишь частью общей картины, реплицированные с
-              зарубежных источников Современные исследования, которые
-              представляют собой яркий пример континентально-европейского типа
-              политической культуры, будут описаны максимально подробно.
+          {choisings.map((choise) => (
+            <div key={choise.id} className="choising__info">
+              <div className="choising__title">{choise.title}</div>
+              <div className="choising__subtitle">{choise.text}</div>
             </div>
-          </div>
+          ))}
 
           <SliderChoising />
         </div>

@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
-import vniz from '../../img/vniz.png'
+import React, { useState } from 'react';
+import vniz from '../../img/vniz.png';
 
 const QuestionAnswerItem = (props) => {
-  const { question, answers } = props
+  // console.log(props);
+  const { question, answers } = props;
 
-  const [showToggle, setShowToggle] = useState(true)
+  const [showToggle, setShowToggle] = useState(true);
 
   const handleToggleShow = () => {
-    setShowToggle(!showToggle)
-  }
+    setShowToggle(!showToggle);
+  };
 
-  const styleShow = ['questions__answers__item__answer']
-  const rotateClass = ['questions__answers__item__pic']
+  const styleShow = ['questions__answers__item__answer'];
+  const rotateClass = ['questions__answers__item__pic'];
   if (showToggle) {
-    rotateClass.push('active')
-    styleShow.push('none')
+    rotateClass.push('active');
+    styleShow.push('none');
   }
 
   return (
@@ -30,7 +31,7 @@ const QuestionAnswerItem = (props) => {
 
       <span className="questions__answers__line"></span>
     </div>
-  )
-}
+  );
+};
 
-export default QuestionAnswerItem
+export default QuestionAnswerItem;

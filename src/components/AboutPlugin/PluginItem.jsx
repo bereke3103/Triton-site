@@ -1,41 +1,42 @@
-import { useState } from 'react'
-import play from '../../img/play.svg'
-import ReactPlayer from 'react-player'
+import { useState } from 'react';
+import play from '../../img/play.svg';
+import ReactPlayer from 'react-player';
 
 const PluginItems = (props) => {
-  const [showInfo, setShowInfo] = useState(1)
-  const [disable, setDisable] = useState(true)
-  const [disableBtn, setDisableBtn] = useState(true)
+  const { title, id } = props;
+  const [showInfo, setShowInfo] = useState(1);
+  const [disable, setDisable] = useState(true);
+  const [disableBtn, setDisableBtn] = useState(true);
 
   //const toggleDisable = () => {
   //setDisable(!disable)
   //}
 
   const toggleShowInfo = (index) => {
-    setShowInfo(index)
+    setShowInfo(index);
     if (index === 2) {
-      setDisableBtn(false)
+      setDisableBtn(false);
     }
     if (index === 3) {
-      setDisable(false)
+      setDisable(false);
     }
-  }
+  };
 
-  console.log(props)
+  // console.log(props);
   return (
     <div className="more__plugin__info">
       <div className="container">
         <div className="more__plugin__text">
           <div className="more__plugin__title__box">
-            <div className="more__plugin__box__title">{props.title}</div>
+            <div className="more__plugin__box__title">{title}</div>
             <div className="plugin__line"></div>
           </div>
 
-          <div className="more__plugin__subtitle__box" id={props.id}>
-            {props.information.map((info) => (
+          <div className="more__plugin__subtitle__box">
+            {props.pluginInformations.map((info) => (
               <div
                 className={
-                  showInfo === info.id
+                  showInfo === info.tab
                     ? 'more__plugin__subtitle active__tabs'
                     : 'more__plugin__subtitle'
                 }
@@ -49,50 +50,22 @@ const PluginItems = (props) => {
         <button disabled={disable} className="download__plugin">
           Скачать
         </button>
-
         <div className="more__plugin__instruct">
-          <div className="text__btn__instruct">
-            <button
-              onClick={() => toggleShowInfo(props.information[0].id)}
-              className={
-                showInfo === props.information[0].id
-                  ? 'btn__intsruct active'
-                  : 'btn__intsruct'
-              }
-            >
-              1
-            </button>
-            <div className="text__instruct">Плагин</div>
-          </div>
-
-          <div className="text__btn__instruct">
-            <button
-              onClick={() => toggleShowInfo(props.information[1].id)}
-              className={
-                showInfo === props.information[1].id
-                  ? 'btn__intsruct active'
-                  : 'btn__intsruct'
-              }
-            >
-              1
-            </button>
-            <div className="text__instruct">Плагин</div>
-          </div>
-
-          <div className="text__btn__instruct">
-            <button
-              disabled={disableBtn}
-              onClick={() => toggleShowInfo(props.information[2].id)}
-              className={
-                showInfo === props.information[2].id
-                  ? 'btn__intsruct active'
-                  : 'btn__intsruct'
-              }
-            >
-              1
-            </button>
-            <div className="text__instruct">Плагин</div>
-          </div>
+          {props.pluginInformations.map((i) => (
+            <div className="text__btn__instruct" id={i.pluginModelId}>
+              <button
+                // disabled
+                // onClick={() => toggleShowInfo(props.information[0].id)}
+                onClick={() => toggleShowInfo(i.tab)}
+                className={
+                  showInfo === i.tab ? 'btn__intsruct active' : 'btn__intsruct'
+                }
+              >
+                {i.tab}
+              </button>
+              <div className="text__instruct">Плагин</div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -108,7 +81,7 @@ const PluginItems = (props) => {
         {/* <img src={play} alt="play" /> */}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PluginItems
+export default PluginItems;

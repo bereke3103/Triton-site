@@ -723,9 +723,10 @@ button:disabled:hover {
 .questions__answers__item__answer {
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
   margin-top: 33px;
+  color: grey;
 }
 
 .questions__answers__item__answer.none {
