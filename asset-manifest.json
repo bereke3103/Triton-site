@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/Triton-site/static/css/main.471dee50.css",
-    "main.js": "/Triton-site/static/js/main.7b290a72.js",
+    "main.js": "/Triton-site/static/js/main.4d7b83be.js",
     "static/media/main.jpg": "/Triton-site/static/media/main.c0243f35acf494929a58.jpg",
     "static/media/bottom.jpg": "/Triton-site/static/media/bottom.fc7ef3dd4c4d960fa0b9.jpg",
     "static/media/card.jpg": "/Triton-site/static/media/card.1dcc5c78804bba4ec727.jpg",
     "static/media/plagin.jpg": "/Triton-site/static/media/plagin.5131390725d191f5cedf.jpg",
-    "static/media/third__reason.svg": "/Triton-site/static/media/third__reason.f76c8a98a2cd98272e3e2fa68714629c.svg",
-    "static/media/first__reason.svg": "/Triton-site/static/media/first__reason.5f1cde365e9b4a0b4086548958c446b4.svg",
-    "static/media/second__reason.svg": "/Triton-site/static/media/second__reason.28a6a92db098e3a113a911648d855844.svg",
-    "static/media/logo.svg": "/Triton-site/static/media/logo.95ac525843a00beddcc9d923f9cd8cf5.svg",
+    "static/media/third__reason.svg": "/Triton-site/static/media/third__reason.8ab2286196eb37d5d1e0685c1216fef2.svg",
+    "static/media/first__reason.svg": "/Triton-site/static/media/first__reason.8971d6c3dea33fa120dadaeb645dbb31.svg",
+    "static/media/second__reason.svg": "/Triton-site/static/media/second__reason.2053a817f4b67553e5fef42350d2398c.svg",
+    "static/media/logo.svg": "/Triton-site/static/media/logo.161490e83ecccff5d0ec63cfedce4f9c.svg",
     "static/media/slick.svg": "/Triton-site/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/Triton-site/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/Triton-site/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Triton-site/static/media/slick.295183786cd8a1389865.woff",
-    "static/media/twitter.svg": "/Triton-site/static/media/twitter.e3fe1748fa7e1c42e43d8918ba1bb7f1.svg",
+    "static/media/twitter.svg": "/Triton-site/static/media/twitter.a4bd0f2c83f58906f6b23a964cb93f10.svg",
     "index.html": "/Triton-site/index.html",
-    "static/media/play.svg": "/Triton-site/static/media/play.7066261e7e689bbc6b5f1a13951cb501.svg",
+    "static/media/play.svg": "/Triton-site/static/media/play.3f259e598ceff091070a334ad9be562f.svg",
     "main.471dee50.css.map": "/Triton-site/static/css/main.471dee50.css.map",
-    "main.7b290a72.js.map": "/Triton-site/static/js/main.7b290a72.js.map"
+    "main.4d7b83be.js.map": "/Triton-site/static/js/main.4d7b83be.js.map"
   },
   "entrypoints": [
     "static/css/main.471dee50.css",
-    "static/js/main.7b290a72.js"
+    "static/js/main.4d7b83be.js"
   ]
 }
