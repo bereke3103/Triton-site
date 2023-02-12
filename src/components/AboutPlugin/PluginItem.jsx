@@ -8,6 +8,7 @@ const PluginItems = (props) => {
   const [showInfo, setShowInfo] = useState(1);
   const [disable, setDisable] = useState(true);
   const [disableBtn, setDisableBtn] = useState(true);
+  console.log(props.pluginInformations);
 
   //const toggleDisable = () => {
   //setDisable(!disable)
@@ -71,7 +72,7 @@ const PluginItems = (props) => {
             {tabs.map((t) => (
               <>
                 <button
-                  // disabled
+                  // disabled={disableBtn}
                   // onClick={() => toggleShowInfo(props.information[0].id)}
                   onClick={() => toggleShowInfo(t.id)}
                   className={
