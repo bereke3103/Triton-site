@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import play from '../../img/play.svg';
 import ReactPlayer from 'react-player';
+import tabs from '../../data/tab';
 
 const PluginItems = (props) => {
   const { title, id } = props;
@@ -53,7 +54,7 @@ const PluginItems = (props) => {
         <div className="more__plugin__instruct">
           {props.pluginInformations.map((i) => (
             <div className="text__btn__instruct" id={i.pluginModelId}>
-              <button
+              {/* <button
                 // disabled
                 // onClick={() => toggleShowInfo(props.information[0].id)}
                 onClick={() => toggleShowInfo(i.tab)}
@@ -62,10 +63,26 @@ const PluginItems = (props) => {
                 }
               >
                 {i.tab}
-              </button>
-              <div className="text__instruct">Плагин</div>
+              </button> */}
+              {/* <div className="text__instruct">Плагин</div> */}
             </div>
           ))}
+          <div className="tabs">
+            {tabs.map((t) => (
+              <>
+                <button
+                  // disabled
+                  // onClick={() => toggleShowInfo(props.information[0].id)}
+                  onClick={() => toggleShowInfo(t.id)}
+                  className={
+                    showInfo === t.id ? 'btn__intsruct active' : 'btn__intsruct'
+                  }
+                >
+                  {t.id}
+                </button>
+              </>
+            ))}
+          </div>
         </div>
       </div>
 

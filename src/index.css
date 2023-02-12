@@ -424,13 +424,25 @@ button:disabled:hover {
 }
 
 .more__plugin__instruct {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: 59px;
   gap: 215px;
-  padding-bottom: 40px;
+  padding-bottom: 40px; */
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 201px;
+  margin-top: 97px;
+  /* margin-bottom: 25px; */
+  /* padding: 19px; */
+  padding-bottom: 43px;
 }
 
 .text__btn__instruct {
@@ -446,12 +458,13 @@ button:disabled:hover {
   left: 0;
   height: 5px;
   width: 50px;
-  margin: 0 auto;
-  margin-left: 34.8%;
+  margin: -12px auto;
+  margin-left: 36.8%;
   background: #666d83;
-  width: 30%;
+  width: 26%;
   margin-top: -22px;
-  margin-top: -1.2%;
+  bottom: 74px;
+  margin-top: 9.8%;
 }
 
 .text__instruct {
