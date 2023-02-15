@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import PluginItems from './PluginItem';
 
-const AboutPlugin = () => {
+const AboutPlugin = ({ ru, kz, en }) => {
   const [plugins, setPlugins] = useState([]);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const AboutPlugin = () => {
     <section className="more__plugin">
       <div className="more__plugin__box">
         {plugins.map((item) => (
-          <PluginItems {...item} key={item.id} />
+          <PluginItems ru={ru} kz={kz} en={en} {...item} key={item.id} />
         ))}
       </div>
     </section>

@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import ProductItem from './Products/ProductItem';
 import { useEffect, useState } from 'react';
 
-const SliderSimple = () => {
+const SliderSimple = ({ ru, kz, en }) => {
   const [plugins, setPlugins] = useState([]);
   useEffect(() => {
     const url = 'https://localhost:7183/getPlugin';
@@ -19,6 +19,7 @@ const SliderSimple = () => {
         setPlugins(result);
       });
   }, []);
+  // console.log(plugins);
 
   const settings = {
     dots: true,
@@ -32,7 +33,7 @@ const SliderSimple = () => {
     <div className="products__items">
       <Slider {...settings}>
         {plugins.map((info) => (
-          <ProductItem {...info} key={info.id} />
+          <ProductItem ru={ru} kz={kz} en={en} {...info} key={info.id} />
         ))}
       </Slider>
     </div>

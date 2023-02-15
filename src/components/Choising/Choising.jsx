@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import SliderChoising from '../SliderChoising';
 
-const Choising = () => {
+const Choising = ({ ru, kz, en }) => {
   const [choisings, setChoisings] = useState([]);
 
   useEffect(() => {
@@ -22,8 +22,16 @@ const Choising = () => {
         <div className="choising__box">
           {choisings.map((choise) => (
             <div key={choise.id} className="choising__info">
-              <div className="choising__title">{choise.title}</div>
-              <div className="choising__subtitle">{choise.text}</div>
+              <div className="choising__title">
+                {ru && choise.title}
+                {kz && choise.titleKZ}
+                {en && choise.titleENG}
+              </div>
+              <div className="choising__subtitle">
+                {ru && choise.text}
+                {kz && choise.textKZ}
+                {en && choise.textENG}
+              </div>
             </div>
           ))}
 

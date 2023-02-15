@@ -1,6 +1,6 @@
 import SliderSimple from '../SliderSimple';
 
-const Products = () => {
+const Products = ({ ru, kz, en }) => {
   return (
     <section className="products" id="plugin">
       <div className="container">
@@ -15,7 +15,7 @@ const Products = () => {
           </div>
         </div>
 
-        <SliderSimple />
+        <SliderSimple ru={ru} kz={kz} en={en} />
       </div>
     </section>
   );

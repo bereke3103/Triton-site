@@ -1,7 +1,19 @@
 import { Link } from 'react-scroll';
 import plugin from '../../img/plagin.jpg';
 const ProductItem = (props) => {
-  const { title, shortInfo, id } = props;
+  const {
+    title,
+    shortInfo,
+    id,
+    titleKZ,
+    titleENG,
+    shortInfoKZ,
+    shortInfoENG,
+    ru,
+    kz,
+    en,
+    imgString,
+  } = props;
   // console.log(id);
   // console.log(props);
   return (
@@ -11,8 +23,12 @@ const ProductItem = (props) => {
       </div>
 
       <div className="products__item__text">
-        <div className="products__item__uptitle">{title}</div>
-        <div className="products__item__title">{shortInfo}</div>
+        <div className="products__item__uptitle">
+          {ru && title} {kz && titleKZ} {en && titleENG}
+        </div>
+        <div className="products__item__title">
+          {ru && shortInfo} {kz && shortInfoKZ} {en && shortInfoENG}
+        </div>
 
         <Link
           offset={-595}

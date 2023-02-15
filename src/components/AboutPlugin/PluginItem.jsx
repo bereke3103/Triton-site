@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 import tabs from '../../data/tab';
 
 const PluginItems = (props) => {
-  const { title, id } = props;
+  const { title, id, ru, kz, en, titleKZ, titleENG } = props;
   const [showInfo, setShowInfo] = useState(1);
   const [disable, setDisable] = useState(true);
   const [disableBtn, setDisableBtn] = useState(true);
@@ -30,7 +30,11 @@ const PluginItems = (props) => {
       <div className="container">
         <div className="more__plugin__text">
           <div className="more__plugin__title__box">
-            <div className="more__plugin__box__title">{title}</div>
+            <div className="more__plugin__box__title">
+              {ru && title}
+              {kz && titleKZ}
+              {en && titleENG}
+            </div>
             <div className="plugin__line"></div>
           </div>
 
@@ -43,7 +47,8 @@ const PluginItems = (props) => {
                     : 'more__plugin__subtitle'
                 }
               >
-                {info.itemInformation}
+                {ru && info.itemInformation} {kz && info.itemInformationKZ}{' '}
+                {en && info.itemInformationENG}
               </div>
             ))}
           </div>

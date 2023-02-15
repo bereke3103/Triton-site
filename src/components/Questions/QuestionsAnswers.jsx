@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import questionAnswer from '../../data/QuestionsAnswers';
 import QuestionAnswerItem from './QuestionAnswerItem';
 
-const QuestionsAnswers = () => {
+const QuestionsAnswers = ({ ru, kz, en }) => {
   const [faq, setFaq] = useState([]);
   useEffect(() => {
     const url = 'https://localhost:7183/getFaq';
@@ -16,15 +16,19 @@ const QuestionsAnswers = () => {
       });
   }, []);
 
+  console.log(faq);
+
   return (
     <div className="questions__answers">
       <div className="questions__answers__box">
         {faq.map((q) => (
           <QuestionAnswerItem
+            {...q}
             newKey={q.id}
             key={q.id}
-            question={q.question}
-            answers={q.answer}
+            ru={ru}
+            kz={kz}
+            en={en}
           />
         ))}
       </div>
