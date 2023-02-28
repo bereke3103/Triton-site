@@ -1,9 +1,24 @@
 import { useEffect, useState } from 'react';
+import Slider from 'react-slick';
 import SliderChoising from '../SliderChoising';
 
 const Choising = ({ ru, kz, en }) => {
   const [choisings, setChoisings] = useState([]);
-
+  const [cards, setCards] = useState([]);
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    beforeChange: function (currentSlide, nextSlide) {
+      console.log('before change', currentSlide, nextSlide);
+    },
+    afterChange: function (currentSlide) {
+      console.log('after change', currentSlide);
+    },
+  };
   useEffect(() => {
     const url = 'https://localhost:7183/getChoising';
 
@@ -15,6 +30,16 @@ const Choising = ({ ru, kz, en }) => {
         setChoisings(result);
       });
   }, [choisings]);
+
+  useEffect(() => {
+    const url = 'https://localhost:7183/getCard';
+
+    fetch(url, {
+      method: 'GET',
+    })
+      .then((response) => response.json())
+      .then((result) => setCards(result));
+  }, []);
 
   return (
     <section className="choising" id="choising">
@@ -35,7 +60,11 @@ const Choising = ({ ru, kz, en }) => {
             </div>
           ))}
 
-          <SliderChoising />
+          <Slider {...settings}>
+            {cards.map((card) => (
+              <SliderChoising {...card} key={card.id} ru={ru} kz={kz} en={en} />
+            ))}
+          </Slider>
         </div>
       </div>
     </section>

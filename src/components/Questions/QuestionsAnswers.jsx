@@ -16,8 +16,6 @@ const QuestionsAnswers = ({ ru, kz, en }) => {
       });
   }, []);
 
-  console.log(faq);
-
   return (
     <div className="questions__answers">
       <div className="questions__answers__box">

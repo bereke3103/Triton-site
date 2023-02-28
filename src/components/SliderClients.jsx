@@ -1,42 +1,10 @@
 import Slider from 'react-slick';
 import client from '../img/antikor.jpg';
 
-const SliderClients = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-  };
+const SliderClients = ({ clientName }) => {
   return (
-    <div className="clients__items">
-      <Slider {...settings}>
-        <div className="clients__item">
-          <img src={client} alt="" />
-        </div>
-        <div className="clients__item">
-          <img src={client} alt="" />
-        </div>
-        <div className="clients__item">
-          <img src={client} alt="" />
-        </div>
-        <div className="clients__item">
-          <img src={client} alt="" />
-        </div>
-        <div className="clients__item">
-          <img src={client} alt="" />
-        </div>
-        <div className="clients__item">
-          <img src={client} alt="" />
-        </div>
-        <div className="clients__item">
-          <img src={client} alt="" />
-        </div>
-        <div className="clients__item">
-          <img src={client} alt="" />
-        </div>
-      </Slider>
+    <div className="clients__item">
+      <img src={`https://${clientName}`} alt="Картинки" />
     </div>
   );
 };

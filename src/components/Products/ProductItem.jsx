@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll';
 import plugin from '../../img/plagin.jpg';
 const ProductItem = (props) => {
+  // console.log(props);
   const {
     title,
     shortInfo,
@@ -19,7 +20,7 @@ const ProductItem = (props) => {
   return (
     <div className="products__item">
       <div className="products__item_pic">
-        <img src={plugin} alt="plugin" />
+        <img src={`https://${props.nameFile}`} alt="plugin" />
       </div>
 
       <div className="products__item__text">

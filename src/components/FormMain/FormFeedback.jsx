@@ -5,6 +5,18 @@ const FormFeedback = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [question, setQuestion] = useState('');
+  const [emailErrorDirty, setEmailErrorDirty] = useState(false);
+
+  const re = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+  const emailHandler = (e) => {
+    setEmail(e.target.value);
+
+    if (!re.test(String(e.target.value).toLowerCase())) {
+      setEmailErrorDirty(true);
+    } else {
+      setEmailErrorDirty(false);
+    }
+  };
 
   const sendMessage = (e) => {
     e.preventDefault();
@@ -16,6 +28,10 @@ const FormFeedback = () => {
       questions: question,
     };
 
+    if (emailErrorDirty === true) {
+      return alert('Введите корректную почту');
+    }
+
     const url = 'https://localhost:7183/feedbackPost';
 
     fetch(url, {
@@ -25,10 +41,16 @@ const FormFeedback = () => {
       },
       body: JSON.stringify(newMessage),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.status === 200) {
+          response.json();
+          alert('Сообщение было отправлено администратору.');
+        } else {
+          alert('Произошла ошибка');
+        }
+      })
       .then((result) => console.log(result));
 
-    alert('Сообщение было отправлено администратору.');
     setSurname('');
     setName('');
     setEmail('');
@@ -41,6 +63,7 @@ const FormFeedback = () => {
         <div className="input__label">
           <label>Фамилия</label>
           <input
+            required
             type="text"
             placeholder="Фамилия"
             value={surname}
@@ -50,6 +73,7 @@ const FormFeedback = () => {
         <div className="input__label">
           <label>Имя</label>
           <input
+            required
             type="text"
             placeholder="Имя"
             value={name}
@@ -57,17 +81,23 @@ const FormFeedback = () => {
           />
         </div>
         <div className="input__label">
-          <label>Ваша почта</label>
+          {emailErrorDirty ? (
+            <label style={{ color: 'red' }}>Введите корректный email</label>
+          ) : (
+            <label>Ваша почта</label>
+          )}
           <input
+            required
             type="text"
             placeholder="Ваша почта"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => emailHandler(e)}
           />
         </div>
         <div className="input__label">
           <label>Задайте ваш вопрос</label>
           <textarea
+            required
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             name=""
