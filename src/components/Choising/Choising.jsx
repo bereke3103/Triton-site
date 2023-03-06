@@ -20,7 +20,7 @@ const Choising = ({ ru, kz, en }) => {
     },
   };
   useEffect(() => {
-    const url = 'https://localhost:7183/getChoising';
+    const url = 'http://46.101.153.165/getChoising';
 
     fetch(url, {
       method: 'GET',
@@ -32,7 +32,7 @@ const Choising = ({ ru, kz, en }) => {
   }, [choisings]);
 
   useEffect(() => {
-    const url = 'https://localhost:7183/getCard';
+    const url = 'http://46.101.153.165/getCard';
 
     fetch(url, {
       method: 'GET',

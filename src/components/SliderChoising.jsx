@@ -19,7 +19,7 @@ const SliderChoising = ({
     <div className="choising__info__with__pic">
       <div className="choising__info__with__pic__item">
         <div className="choising__pic">
-          <img src={`https://${nameFile}`} alt="" />
+          <img src={`http://${nameFile}`} alt="" />
         </div>
 
         {/* <div className="choising__info__logo">

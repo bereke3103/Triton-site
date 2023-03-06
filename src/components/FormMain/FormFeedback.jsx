@@ -32,7 +32,7 @@ const FormFeedback = () => {
       return alert('Введите корректную почту');
     }
 
-    const url = 'https://localhost:7183/feedbackPost';
+    const url = 'http://46.101.153.165/feedbackPost';
 
     fetch(url, {
       method: 'POST',

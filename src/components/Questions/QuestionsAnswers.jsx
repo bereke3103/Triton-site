@@ -5,7 +5,7 @@ import QuestionAnswerItem from './QuestionAnswerItem';
 const QuestionsAnswers = ({ ru, kz, en }) => {
   const [faq, setFaq] = useState([]);
   useEffect(() => {
-    const url = 'https://localhost:7183/getFaq';
+    const url = 'http://46.101.153.165/getFaq';
 
     fetch(url, {
       method: 'GET',

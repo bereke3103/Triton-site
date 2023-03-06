@@ -7,7 +7,7 @@ const AboutPlugin = ({ ru, kz, en }) => {
   const [plugins, setPlugins] = useState([]);
 
   useEffect(() => {
-    const url = 'https://localhost:7183/getPlugin';
+    const url = 'http://46.101.153.165/getPlugin';
 
     fetch(url, {
       method: 'GET',

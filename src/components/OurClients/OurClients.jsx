@@ -42,7 +42,7 @@ const OurClients = () => {
   const [client, setClient] = useState([]);
 
   useEffect(() => {
-    const url = 'https://localhost:7183/getClient';
+    const url = 'http://46.101.153.165/getClient';
 
     fetch(url, {
       method: 'GET',
