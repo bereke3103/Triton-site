@@ -7,8 +7,8 @@ Ii18n.use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLing: 'ru',
-    whiteList: ['ru', 'kz', 'en'],
+    fallbackLng: 'ru',
+    whitelist: ['ru', 'kz', 'en'],
     debug: false,
     detection: {
       order: ['localStorage', 'cookie'],

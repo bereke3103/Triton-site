@@ -20,7 +20,7 @@ const ProductItem = (props) => {
   return (
     <div className="products__item">
       <div className="products__item_pic">
-        <img src={`http://${props.nameFile}`} alt="plugin" />
+        <img src={props.nameFile} alt="plugin" />
       </div>
 
       <div className="products__item__text">

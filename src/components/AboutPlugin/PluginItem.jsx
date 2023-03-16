@@ -61,7 +61,7 @@ const PluginItems = (props) => {
             Скачать
           </button>
         ) : (
-          <a href={`https://${props.pluginName}`} className="download__plugin">
+          <a href={`${props.pluginName}`} download className="download__plugin">
             Скачать
           </a>
         )}

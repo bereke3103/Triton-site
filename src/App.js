@@ -9,28 +9,32 @@ import Choising from './components/Choising/Choising';
 import AboutPlugin from './components/AboutPlugin/AboutPlugin';
 import Questions from './components/Questions/Questions';
 import FormMain from './components/FormMain/FormMain';
-
 import Footer from './components/Footer/Footer';
 import { useState } from 'react';
-import { Link } from 'react-scroll';
 import HeaderBurger from './components/Header/HeaderBurger';
+import '../src/utils/i18n';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const { t, i18n } = useTranslation();
   const [ru, setRu] = useState(true);
   const [kz, setKz] = useState(false);
   const [en, setEn] = useState(false);
 
   const toggleRu = () => {
+    i18n.changeLanguage('ru');
     setRu(true);
     setKz(false);
     setEn(false);
   };
   const toggleKz = () => {
+    i18n.changeLanguage('kz');
     setRu(false);
     setKz(true);
     setEn(false);
   };
   const toggleEn = () => {
+    i18n.changeLanguage('en');
     setRu(false);
     setKz(false);
     setEn(true);
